@@ -7,13 +7,14 @@
 FROM    ubuntu:20.04
 
 # Give label for your docker file
-LABEL describtion="This is my first image"
-
-MAINTAINER "diyor isroilov"
+LABEL   describtion="This is my first image" \
+        maintainer="diyor isroilov"
 
 # install telnet     
-RUN     apt-get update -y            
-RUN     apt-get install telnet -y       
+RUN     apt-get update -y  \          
+        apt-get install telnet -y  \
+        apt-get install apache2 -y  
 
 # Open port 80 on container
 EXPOSE 80
+
